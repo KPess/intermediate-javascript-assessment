@@ -44,6 +44,13 @@ function noWeakLink() {
     url: '/api/users'
   })
   // CODE HERE...
+.then(function(response){
+  firstUser = response.data[0]
+  return response
+}).then(function(response){
+  thirdUser = response.data[2]
+  return response.data[9]
+})
 
 }
 
