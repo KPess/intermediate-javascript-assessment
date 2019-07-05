@@ -122,18 +122,15 @@ charger.drive()
 
 // CODE HERE...
 
-var greeting = "OH HELLO THERE"
 
 String.prototype.grammarPolice = function(str) {
-  str = str.toLowerCase().str.split(' ')
-  for (var i=0; i <str.length; i++) {
-    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+  let str1 = str.toLowerCase().split(' ')
+  for (var i=0; i <str1.length; i++) {
+    str1[i] = str1[i].charAt(0).toUpperCase() + str1[i].slice(1);
   }
-  return str.join(' ')
+  return str1.join(' ')
 }
 
-
-greeting.grammarPolice()
 
 
 
@@ -179,8 +176,8 @@ var theAnswer = "Unknown";
 
 // CODE HERE...
 
-function promiseCatcher(param) {
-    param.then(function(resolve){
-      theAnswer = resolve
+function promiseCatcher(param)  {
+     param.then(function(response){
+      theAnswer = response
     })
 }

@@ -81,7 +81,7 @@ function large() {
   return 'My name is ' + this.name + ' and I am very heavy!'
 }
 // CODE HERE...
-
+var boundToElephant = this.large.bind(elephant, elephant.name)
 
 
 // *************
@@ -95,7 +95,14 @@ function large() {
 // and return the bound function.
 
 // CODE HERE...
-
+function deathStar(capacity, crew){
+  var crew = {
+    name: 'Stormtroopers'
+  }
+  var capacity = function () {
+    return capacity.bind(crew)
+  }
+}
 
 
 // *************
@@ -110,7 +117,17 @@ function large() {
 // The closure function will return the combined value of assets and liabilities.
 
 // CODE HERE...
+var accountingOffice = (function (assets) {
+  var netWorth = assets;
+  return function (liabilities) {netWorth - liabilities}
+})
 
+// function accountingOffice(assets) {
+//   let netWorth = function(liabilities) {
+//     assets - liabilities
+//   }
+//   return netWorth
+// }
 
 
 // *************
